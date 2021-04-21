@@ -15,6 +15,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Title</th>
                             <th scope="col">Description</th>
+                            <th class="text-center" scope="col">Image</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -23,9 +24,9 @@
                             <td scope="row">{{$post->id}}</td>
                             <td>{{ $post->title }}</td>
                             <td>{{ $post->description }}</td>
+                            <td><img src="{{ asset('/storage/img/'.$post->img) }}" alt="No image found"></td>
                             <a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a>
                           </tr>
-                        
                         </tbody>
                       </table>
 
